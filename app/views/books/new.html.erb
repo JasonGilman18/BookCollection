@@ -37,7 +37,7 @@
         <div class="formElement">
             <%= form.label :published_date, "Date Published" %>
             <br>
-            <%= form.date_select :published_date, {order: [:month, :day, :year], start_year: 1990, end_year: 2020, prompt: {month: "Select Month", day: "Select Day", year: "Select Year"}}  %>
+            <%= form.date_select :published_date, {order: [:month, :day, :year], start_year: 1990, end_year: 2020, prompt: {month: "Select Month", day: "Select Day", year: "Select Year"}} %>
             <% @book.errors.full_messages_for(:published_date).each do |message| %>
                 <div><%= message %></div>
             <% end %>
