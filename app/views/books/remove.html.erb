@@ -1,0 +1,19 @@
+<div class="center">
+    <h1>Remove Book</h1>
+
+        <ul>
+            <p><b>Title:</b> <%= @book.title %></p>
+            <br>
+            <p><b>Author:</b> <%= @book.author %></p>
+            <br>
+            <p><b>Genre:</b> <%= @book.genre %></p>
+            <br>
+            <p><b>Price:</b> $<%= @book.price %></p>
+            <br>
+            <p><b>Published Date (Year-Month-Day):</b> <%= @book.published_date.to_s.split(" ")[0] %></p>
+        </ul>
+
+    <%= button_to "Remove Book", book_path(@book), method: :delete, data: { confirm: "Confirm Removal?" } %>
+    <br>
+    <%= link_to "Home", root_path %>
+</div>

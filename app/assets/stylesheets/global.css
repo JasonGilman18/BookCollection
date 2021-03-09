@@ -1,0 +1,53 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.center
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.indexTable
+{
+    margin-top: 25px;
+}
+
+th, td
+{
+    border: 2px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+.notice
+{
+    padding: 10px;
+    background-color: #94FA92;
+    text-align: center;
+    border-radius: 6px;
+}
+
+p
+{
+    margin:0;
+}
+
+.horozontal
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.showLink
+{
+    margin: 10px;
+}
+
+.formElement
+{
+    margin: 10px;
+}

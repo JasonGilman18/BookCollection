@@ -1,0 +1,51 @@
+<div class="center">
+    <h1>Edit Book</h1>
+
+    <%= form_with model: @book do |form| %>
+        <div class="formElement">
+            <%= form.label :title, "Title" %>
+            <br>
+            <%= form.text_field :title %>
+            <% @book.errors.full_messages_for(:title).each do |message| %>
+                <div><%= message %></div>
+            <% end %>
+        </div>
+        <div class="formElement">
+            <%= form.label :author, "Author" %>
+            <br>
+            <%= form.text_field :author %>
+            <% @book.errors.full_messages_for(:author).each do |message| %>
+                <div><%= message %></div>
+            <% end %>
+        </div>
+        <div class="formElement">
+            <%= form.label :genre, "Genre" %>
+            <br>
+            <%= form.select :genre, ['Action', 'Adventure', "Biography", "Drama", "Fantasy", "Mystery", "Romance", "Thriller"] %>
+            <% @book.errors.full_messages_for(:genre).each do |message| %>
+                <div><%= message %></div>
+            <% end %>
+        </div>
+        <div class="formElement">
+            <%= form.label :price, "Price" %>
+            <br>
+            <%= form.number_field :price, in: 0.0..50.0, step: 1.0 %>
+            <% @book.errors.full_messages_for(:price).each do |message| %>
+                <div><%= message %></div>
+            <% end %>
+        </div>
+        <div class="formElement">
+            <%= form.label :published_date, "Date Published" %>
+            <br>
+            <%= form.date_select :published_date, {order: [:month, :day, :year], start_year: 1990, end_year: 2020} %>
+            <% @book.errors.full_messages_for(:published_date).each do |message| %>
+                <div><%= message %></div>
+            <% end %>
+        </div>
+        <div class="formElement">
+            <%= form.submit "Save Edit" %>
+        </div>
+    <% end %>
+
+    <%= link_to "Home", root_path %>
+</div>
