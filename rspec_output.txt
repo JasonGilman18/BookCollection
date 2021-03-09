@@ -1,0 +1,28 @@
+
+new book acceptance
+.  the user is able to add a new book
+.  ther user is not able to add an invalid book
+
+book double
+.  test stub book model
+
+book integrations
+.  display the flash notice after adding, editing book
+.  does not display flash notice after returning to home before submitting add new book
+
+Book
+.  Book is valid with valid attributes
+.  Book is not valid without a title
+.  Book is not valid without a author
+.  Book is not valid without a genre
+.  book is not valid without a price
+.  book is not valid without a date
+
+
+Finished in 0.286 seconds (files took 2.56 seconds to load)
+11 examples, 0 failures
+
+Finished in 0.286 seconds (files took 2.56 seconds to load)
+11 examples, 0 failures
+
+
